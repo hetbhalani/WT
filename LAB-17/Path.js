@@ -13,7 +13,7 @@ const dir = path.dirname(filepath);
 
 const bn = path.basename(filepath);
 
-const extName = path.(filepath);
+const extName = path.extname(filepath);
 
 console.log(extName);
 
