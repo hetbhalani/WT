@@ -7,6 +7,22 @@ app.get('/', (req,res)=>{
     res.send("hello world");
 })
 
+app.get('/home', (req,res)=>{
+    res.send("This is Home");
+})
+
+app.get('/about', (req,res)=>{
+    res.send("About us");
+})
+
+app.get('/contect', (req,res)=>{
+    res.send("Contect us");
+})
+
+app.get('/services', (req,res)=>{
+    res.send("our services");
+})
+
 app.listen(port , ()=>{
-    console.log(port + "asdfghjklqwertyuiopzxcvbnm");
+    console.log(port + "Done");
 })
