@@ -14,7 +14,8 @@ app.get('/home', (req,res)=>{
 app.get('/about', (req,res)=>{
     res.setHeader('Content-Type', 'text/plain');
     fs.readFile('about.txt', (err,data)=>{
-        res.send(data.toString())    })
+        res.send(data.toString())
+    })
 });
 
 app.get('/services', (req,res)=>{
@@ -33,5 +34,5 @@ app.get('/contact', (req,res)=>{
 
 
 app.listen(port,()=>{
-    console.log("done")
+    console.log("done") 
 })
