@@ -15,18 +15,19 @@ const user = [{
 app.post('/user', (req,res)=>{
     const {name} = req.body;
     user.push(name);
-        
+    res.send(name)
 })
 
 app.get('/user',(req,res)=>{
     res.send(user)
 });
 
-app.patch('/user/:index/:update', (req,res)=>{
+app.patch('/user/:index', (req,res)=>{
+    const update = req.body;
     const index = req.params.index;
    const {name} = req.body; 
 
-   user[index].name = req.params.update;
+   user[index].name = update;
    res.send("thai gyu")
 });
 
