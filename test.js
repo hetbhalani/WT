@@ -1,13 +1,22 @@
-const path = require('path')
-const fs = require('fs')
-const child_process = require('child_process')
-const { stdin } = require('process')
+const express = require('express');
+const { default: mongoose } = require('mongoose');
+const app = express();
 
-console.log(path.dirname('C:\\Users\\LENOVO\\OneDrive\\Desktop\\SEM-3\\WT'))
-console.log(path.resolve('C:\\Users\\LENOVO\\OneDrive\\Desktop\\SEM-3\\WT','\\git-bash.lnk'))
-fs.stat('test.js', (err,data)=>{
-    console.log(data)
+app.use(express.json);
+
+app.get('/students', (req,res) =>{
+    res.send('Welcome home')
 })
 
-let a = 2 + 3
-console.log(a);
+app.post('/students', (req,res)=>{
+    res.send('data mli gyo bhai');
+})
+
+mongoose.connect('mongodb+srv://hetbhalani:tBWgJkDxGlGkLVCt@cluster0.63cja.mongodb.net/')
+.then(()=>{
+    console.log("connected to database");
+    
+    app.listen(3000, ()=> {
+        console.log('server is running on 3000');
+    })
+})
