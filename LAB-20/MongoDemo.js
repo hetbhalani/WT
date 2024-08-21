@@ -14,5 +14,7 @@ mongoose.connect('mongodb+srv://hetbhalani:tBWgJkDxGlGkLVCt@cluster0.63cja.mongo
         const student = await userSchema.find()
         res.send(student);
     })
+
+    app.post('')
     
 })
