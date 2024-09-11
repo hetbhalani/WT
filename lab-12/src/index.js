@@ -42,7 +42,7 @@ function Nav() {
         </div>
         <div className='col'>
           <Outlet/>
-        <div>
+        </div>
       </div>
     </div>
 
@@ -62,12 +62,14 @@ function Nav() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter> 
-    <Nav/>
+
     <Routes>
-      <Route path='/home' element={<Home/>} />
-      <Route path='/about' element={<About/>} />
-      <Route path='/service' element={<Service/>} />
-      <Route path='/contect' element={<Contect/>} />
+      <Route path='/' element={<Nav/>}>
+        <Route path='/home' element={<Home/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/service' element={<Service/>} />
+        <Route path='/contect' element={<Contect/>} />
+      </Route>
     </Routes>
   </BrowserRouter>
 );
