@@ -34,7 +34,26 @@ function Nav() {
         </div>
       </div>
     </nav>
-    <Outlet/>
+
+    <div className='container-fluid'>
+      <div className='row'>
+        <div className='col-2'>
+          <div className='border border-2 border-danger d-flex justify-content-center align-items-center' style={{height: '500px'}}>Sidebar</div>  
+        </div>
+        <div className='col'>
+          <Outlet/>
+        <div>
+      </div>
+    </div>
+
+    <div className='container-fluid'>
+      <div className='row'>
+        <div className='col'>
+          <div className='mt-5 border border-2 border-success d-flex justify-content-center align-items-center' style={{height: '50px'}}>Footer</div>
+        </div>
+      </div>
+    </div>
+
     </>
   );
   
